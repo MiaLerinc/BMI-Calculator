@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.bmicalculator.Controller"
+            style="-fx-background-color: #F0F8FF;">
+      <center>
+      
+          <GridPane hgap="10" vgap="10" alignment="TOP_CENTER">
+              <fx:define>
+                  <ToggleGroup fx:id="units"/>
+              </fx:define>
+              <RadioButton fx:id="IU" toggleGroup="$units" GridPane.columnIndex="0" GridPane.rowIndex="0" text="Imperial Units" selected="true" minWidth="120"/>
+              <RadioButton fx:id="MU" toggleGroup="$units" GridPane.columnIndex="1" GridPane.rowIndex="0" text="Metric Units" minWidth="200"/>
+              <Label text="Height:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+              <TextField fx:id="height" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <Label text="in / m" GridPane.columnIndex="2" GridPane.rowIndex="1" minWidth="120"/>
+              <Label text="Weight:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+              <TextField fx:id="weight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <Label text="lbs / kg" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+              <Button onAction="#onCalculateButtonClick" text="Calculate!" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+              <Label GridPane.halignment="CENTER" fx:id="num" GridPane.columnIndex="1" GridPane.rowIndex="5" textFill="red">
+                <font>
+                    <Font size="15"/>
+                </font>
+              </Label>
+              <Label GridPane.halignment="CENTER" text="Your BMI is" GridPane.columnIndex="1" GridPane.rowIndex="6" textFill="darkblue">
+                  <font>
+                      <Font size="30"/>
+                  </font>
+              </Label>
+              <Label textFill="dodgerblue" GridPane.halignment="CENTER" fx:id="BMI1" GridPane.columnIndex="1" GridPane.rowIndex="7" textAlignment="CENTER">
+                  <font>
+                      <Font size="25"/>
+                  </font>
+              </Label>
+              <Label textFill="green" GridPane.halignment="CENTER" fx:id="BMI2" GridPane.columnIndex="1" GridPane.rowIndex="7" textAlignment="CENTER">
+                  <font>
+                      <Font size="25"/>
+                  </font>
+              </Label>
+              <Label textFill="yellow" GridPane.halignment="CENTER" fx:id="BMI3" GridPane.columnIndex="1" GridPane.rowIndex="7" textAlignment="CENTER">
+                  <font>
+                      <Font size="25"/>
+                  </font>
+              </Label>
+              <Label textFill="orangered" GridPane.halignment="CENTER" fx:id="BMI4" GridPane.columnIndex="1" GridPane.rowIndex="7" textAlignment="CENTER">
+                  <font>
+                      <Font size="25"/>
+                  </font>
+              </Label>
+              <Label textFill="red" GridPane.halignment="CENTER" fx:id="BMI5" GridPane.columnIndex="1" GridPane.rowIndex="7" textAlignment="CENTER">
+                  <font>
+                      <Font size="25"/>
+                  </font>
+              </Label>
+              <Label textFill="darkred" GridPane.halignment="CENTER" fx:id="BMI6" GridPane.columnIndex="1" GridPane.rowIndex="7" textAlignment="CENTER">
+                  <font>
+                      <Font size="25"/>
+                  </font>
+              </Label>
+          </GridPane>
+      </center>
+
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</BorderPane>
